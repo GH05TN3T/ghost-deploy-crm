@@ -1,7 +1,7 @@
-# 🚀 Instalador Automático de Odoo 18 Community en Debian 12
+# 🚀 Instalador Automático de Odoo 18 Community en Debian 12 / Ubuntu 22.04+
 
 ## 📋 Descripción
-Conjunto de scripts para instalar, gestionar y desinstalar Odoo 18 Community en Debian 12 con PostgreSQL 14 específicamente configurado para evitar actualizaciones automáticas problemáticas.
+Conjunto de scripts para instalar, gestionar y desinstalar Odoo 18 Community en Debian 12 y Ubuntu 22.04+ con PostgreSQL 14 específicamente configurado para evitar actualizaciones automáticas problemáticas.
 
 ## 🎯 Características Principales
 
@@ -83,7 +83,7 @@ sudo bash clean-postgresql.sh
 
 ## 📋 Requisitos del Sistema
 
-- **OS:** Debian 12 (Bookworm)
+- **OS:** Debian 12 (Bookworm) o Ubuntu 22.04+ (Jammy)
 - **Arquitectura:** x86_64
 - **Memoria:** Mínimo 2GB RAM
 - **Espacio:** Mínimo 10GB libre

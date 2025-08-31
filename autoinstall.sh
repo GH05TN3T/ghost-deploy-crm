@@ -32,15 +32,15 @@ apt update && apt upgrade -y
 echo -e "${PACKAGE} Instalando dependencias necesarias..."
 apt install -y git python3 python3-pip python3-venv python3-dev \
 build-essential libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev \
-libldap2-dev libjpeg-dev libpq-dev libffi-dev libjpeg62-turbo-dev \
+libldap2-dev libjpeg-dev libpq-dev libffi-dev libjpeg-turbo8-dev \
 liblcms2-dev libblas-dev libatlas-base-dev libssl-dev libtiff5-dev \
 libopenjp2-7-dev libwebp-dev node-less npm curl wget xz-utils fontconfig
 
 # 🐘 Instalar PostgreSQL 14 específicamente
 echo -e "${PACKAGE} Instalando PostgreSQL 14 (versión estable)..."
 # Agregar repositorio oficial de PostgreSQL
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /usr/share/keyrings/postgresql-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/postgresql-keyring.gpg] http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 
 # Actualizar repositorios
 apt update
